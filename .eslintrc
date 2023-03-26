@@ -1,0 +1,50 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+  ],
+  "globals": {
+    "Promise": true,
+    "Set": true,
+    "esprima": true
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "amd": true
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "parser": "@babel/eslint-parser",
+    "requireConfig": false,
+    "sourceType": "module",
+    "ecmaVersion": 2022,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["unused-imports"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      },
+      {
+        "usePrettierrc": true
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "no-case-declarations": "off",
+    "no-useless-escape": "off",
+    "react/no-children-prop": "off"
+  }
+}
